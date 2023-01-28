@@ -18,7 +18,7 @@ public class Smite {
     public static final String RESPONSE_TYPE_XML = "xml";
     private String responseFormat = RESPONSE_TYPE_JSON;
 
-    private static final String BASE_URL = "http://api.smitegame.com/smiteapi.svc/";
+    private static final String BASE_URL = "https://api.smitegame.com/smiteapi.svc/";
 
     public Smite(String developerId, String authKey) {
         this.developerId = developerId;
