@@ -18,7 +18,7 @@ public static void main(String... args) {
 
 ### Dependencies
 * [OkHttp](https://github.com/square/okhttp)/[Okio](https://github.com/square/okio) - Used to make network calls
-* [minimal-json](https://github.com/ralfstx/minimal-json) - Used to process server response when creating a new API session
+* [gson](https://mvnrepository.com/artifact/com.google.code.gson/gson) - Used to process server response when creating a new API session
 
 ### License
 The MIT License (MIT)
