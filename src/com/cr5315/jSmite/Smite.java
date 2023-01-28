@@ -1,6 +1,7 @@
 package com.cr5315.jSmite;
 
-import com.eclipsesource.json.JsonObject;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -46,9 +47,9 @@ public class Smite {
         }, "/"));
         if (result == null) return false;
 
-        JsonObject object = JsonObject.readFrom(result);
-        if (object.get("ret_msg").asString().equals("Approved")) {
-            sessionId = object.getString("session_id", null);
+        JsonObject object = new JsonParser().parse(result).getAsJsonObject();
+        if (object.get("ret_msg").getAsString().equals("Approved")) {
+            sessionId = object.get("session_id").getAsString();
             sessionStart = System.currentTimeMillis();
             return true;
         } else {
